@@ -15,7 +15,7 @@
  * @returns {Array} Новый одномерный массив, содержащий все элементы исходного массива
  */
 
-const flatten = (array) => {
+function flatten (array) {
     let result = [];
 
     for (let i = 0; i < array.length; i++) {
