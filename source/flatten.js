@@ -14,7 +14,6 @@
  *
  * @returns {Array} Новый одномерный массив, содержащий все элементы исходного массива
  */
-
 function flatten (array) {
     let result = [];
 
@@ -29,4 +28,4 @@ function flatten (array) {
     }
 
     return result;
-};
+}
