@@ -12,20 +12,17 @@
  * // возвращает []
  * flatten([]);
  *
- * @returns {Array} Новый одномерный массив, содержащий все элементы исходного массива
+ * @returns {Array} Новый одномерный массив, содержащий все элементы исходного
+ *     массива
  */
-function flatten (array) {
-    let result = [];
-
-    for (let i = 0; i < array.length; i++) {
-        const item = array[i];
-
-        if (Array.isArray(item)) {
-            result = result.concat(flatten(item));
-        } else {
-            result.push(item);
-        }
+function flatten(array) {
+  let result = [];
+  for (const item of array) {
+    if (Array.isArray(item)) {
+      result = [...result, ...flatten(item)];
+    } else {
+      result.push(item);
     }
-
-    return result;
+  }
+  return result;
 }
