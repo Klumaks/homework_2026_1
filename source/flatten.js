@@ -15,7 +15,7 @@
  * @returns {Array} Новый одномерный массив, содержащий все элементы исходного
  *     массива
  */
-function flatten(array) {
+const flatten = (array) => {
   let result = [];
   for (const item of array) {
     if (Array.isArray(item)) {
@@ -25,4 +25,4 @@ function flatten(array) {
     }
   }
   return result;
-}
+};
