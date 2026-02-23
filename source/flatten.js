@@ -16,6 +16,9 @@
  *     массива
  */
 const flatten = (array) => {
+  if (!Array.isArray(array)) {
+    return [];
+  }
   let result = [];
   for (const item of array) {
     if (Array.isArray(item)) {
